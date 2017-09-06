@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>Self Devourer</title>
+        <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="plugin/responsive-nav/responsive-nav.css">
+        <link rel="stylesheet" href="plugin/responsive-nav/styles.css">
+        <link rel="stylesheet" href="global/styles.css">
+        <!-- Boostrap fileinput -->
+        <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap-fileinput/4.3.5/css/fileinput.min.css">
+        <style>
+            .nav-tabs {
+                position: relative;
+                border: 0;
+            }
+            .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+                cursor: default;
+                position: relative;
+                z-index: 12;
+                color: #555555;
+                background: #FFF;
+                border-color: #CFCFCF;
+                border-bottom: 1px solid #FFF;
+            }
+            .tab-content {
+                position: relative;
+                z-index: 10;
+                min-height: 125px;
+                padding: 16px 12px;
+                border: 1px solid #CCC;
+            }
+        </style>
+    </head>
+    <body>
+        <div role="navigation" id="nav" class="nav-collapse">
+            <ul>
+                <li>
+                    <a href="index.php">博客</a>
+                </li>
+                <li>
+                    <a href="technology_blog.php">技术博客</a>
+                </li>
+                <li>
+                    <a href="timeline.php">Timline</a>
+                </li>
+                <li>
+                    <a href="#about">联系</a>
+                </li>
+            </ul>
+        </div>
+        <div role="main" class="main">
+            <a href="#nav" class="nav-toggle" style="z-index: 1;">Menu</a>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12 col-xs-12 col-md-12 col-lg-offset-1 col-lg-10">
+                        <ul id="myTab" class="nav nav-tabs">
+                            <li class="active"><a href="#timeline-pane" data-toggle="tab">Timeline</a></li>
+                            <li><a href="#blog-pane" data-toggle="tab">Blog</a></li>
+                        </ul>
+                        <div id="myTabContent" class="tab-content">
+                            <div class="tab-pane fade in active" id="timeline-pane">
+                                <div class="alert" id='alert' style='display:none;'>
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" rows="8" style="resize:none;" placeholder="想说点什么？"></textarea>
+                                </div>
+                                <button type="button" class="btn btn-primary" id="release_button">发布</button>
+                                <div style="padding-top:10px;">
+                                    <input id="upload_image" name="images" type="file" multiple class="file-loading" accept="image/*"/>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="blog-pane">
+                                <p>Blog</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="plugin/responsive-nav/responsive-nav.min.js"></script>
+        <!-- <script src="plugin/responsive-nav/responsive-nav.js"></script> -->
+        <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <!-- Boostrap fileinput -->
+        <script src="http://cdn.bootcss.com/bootstrap-fileinput/4.3.5/js/fileinput.min.js"></script>
+        <script type="text/javascript">
+            var navigation = responsiveNav("nav", {
+                customToggle: ".nav-toggle"
+            });
+            $(function () {
+                var file_input_config = {
+                    uploadUrl: 'php/upload_images.php',
+                    showCaption: false,
+                    dropZoneTitle: '拖动图片到这里上传……',
+                    fileActionSettings: {
+                        showZoom: false,
+                        showRemove: false,
+                        showUpload: false
+                    },
+                    browseLabel: '图片',
+                    browseIcon: '<i class="glyphicon glyphicon-picture"></i>&nbsp;',
+                    allowedFileExtensions: ["jpg", "png", "gif"]
+                };
+                $("#upload_image").fileinput(file_input_config);
+
+                $('#upload_image').on('fileuploaded', fileUploaded).on('fileclear', fileClear);
+
+                $('#myTab a[href="#"]').tab('show');
+
+                $('#nav a').click(function () {
+                    $(this).parent().addClass('active').siblings().removeClass('active');
+                    var height = $($(this).attr('href')).offset().top - 290;
+                    $('body').animate({
+                        scrollTop: height
+                    }, 248);
+                    return false;
+                });
+
+                $('#release_button').click(function () {
+                    var content = $('textarea').val();
+                    if (content === null || content === undefined || content === '') {
+                        $('#alert').removeClass('alert-success').addClass('alert-warning').html('不能发布空内容哟');
+                        $("#alert").show(300);
+                        setTimeout('$("#alert").hide(500)', 3000);
+                        return;
+                    }
+                    content = content.replace(/\t/g, '&emsp;&emsp;');
+                    content = content.replace(/\n/g, '<br>');
+                    var images = new Array();
+                    $('.form-group input[name="images"]').each(function () {
+                        images.push($(this).val());
+                    });
+                    $('#upload_image').fileinput('clear');
+                    $('textarea').val('');
+                    $.post('php/release_timeline.php', {
+                        content: content,
+                        images: images},
+                            function (result) {
+                                if (result.code == 0) {
+                                    $('#alert').removeClass('alert-warning').addClass('alert-success').html('发布成功！');
+                                } else {
+                                    $('#alert').removeClass('alert-success').addClass('alert-warning').html('发布失败！');
+                                }
+                                $("#alert").show(300);
+                                setTimeout('$("#alert").hide(500)', 3000);
+                            })
+                });
+
+                $('textarea').keydown(function (event) {
+                    if (event.which == 9) {
+                        event.preventDefault();
+                        var start = $(this).get(0).selectionStart;
+                        var end = $(this).get(0).selectionEnd;
+
+                        $(this).val($(this).val().substring(0, start)
+                                + "\t"
+                                + $(this).val().substring(end));
+
+                        $(this).get(0).selectionStart =
+                                $(this).get(0).selectionEnd = start + 1;
+                    }
+                });
+            });
+
+            function fileUploaded(event, data, previewId, index) {
+                console.log('fileUploaded success');
+                var response = data.response;
+                if (response.code == 0) {
+                    $('.form-group').append('<input type="hidden" name="images" value="'
+                            + data.response.picUrl + '" />')
+                }
+            }
+
+            function fileClear(event) {
+                $('.form-group input[name="images"]').remove()
+                console.log("fileclear success");
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>Self Devourer</title>
+        <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../../../plugin/responsive-nav/responsive-nav.css">
+        <link rel="stylesheet" href="../../../../plugin/responsive-nav/styles.css">
+        <link rel="stylesheet" href="../../../../global/styles.css">
+        <style>
+            .blog-content {
+                font-size: 15px;
+                line-height: 180%;
+            }
+            hr {
+                border: 1px solid #eee;
+            }
+            blockquote {
+                padding: 3px 20px;
+                margin: 8px 5px;
+            }
+            blockquote p {
+                float: none;
+                font-size: 15px;
+                color: #999999;
+            }
+            @media (min-width: 768px) { 
+                .col-lg-11{
+                    border: 1px solid LightGrey;
+                } 
+                .blog-content {
+                    padding: 40px 40px;
+                }
+            }
+        </style>
+    <body> 
+        <div role="navigation" id="nav" class="nav-collapse">
+            <ul>
+                <li>
+                    <a href="../../../../index.php">博客</a>
+                </li>
+                <li class="active">
+                    <a href="../../../../technology_blog.php">技术博客</a>
+                </li>
+                <li>
+                    <a href="../../../../timeline.php">Timline</a>
+                </li>
+                <li>
+                    <a href="#about">联系</a>
+                </li>
+            </ul>
+        </div>
+        <div role="main" class="main">
+            <a href="#nav" class="nav-toggle" style="z-index: 1;">Menu</a>
+            <div class="container-fluid">
+                <div class="row" id="blog">
+                    <div class="col-sm-12 col-xs-12 col-md-12 col-lg-offset-1 col-lg-11">
+                        <div class="blog-content">
+                            <h1>高级语言程序设计</h1><hr/>
+                            <h2>基本知识</h2>
+                            <h3>保留字</h3>
+                            <div class="col-lg-12 col-xs-12 col-sm-12 col-md-12">
+                                <table class="table table-bordered table-condensed table-responsive text-center">
+                                    <tbody>
+                                        <tr>
+                                            <td>auto</td>
+                                            <td>break</td>
+                                            <td>case</td>
+                                            <td>char</td>
+                                        </tr>
+                                        <tr>
+                                            <td>continue</td>
+                                            <td>const</td>
+                                            <td>default</td>
+                                            <td>do</td>
+                                        </tr>
+                                        <tr>
+                                            <td>double</td>
+                                            <td>else</td>
+                                            <td>enum</td>
+                                            <td>extern</td>
+                                        </tr>
+                                        <tr>
+                                            <td>float</td>
+                                            <td>for</td>
+                                            <td>goto</td>
+                                            <td>int</td>
+                                        </tr>
+                                        <tr>
+                                            <td>if</td>
+                                            <td>long</td>
+                                            <td>register</td>
+                                            <td>return</td>
+                                        </tr>
+                                        <tr> 
+                                            <td>short</td>
+                                            <td>signed</td>
+                                            <td>sizeof</td>
+                                            <td>static</td>
+                                        </tr>
+                                        <tr>
+                                            <td>struct</td>
+                                            <td>switch</td>
+                                            <td>typedef</td>
+                                            <td>union</td>
+                                        </tr>
+                                        <tr>
+                                            <td>unsigned</td>
+                                            <td>void</td>
+                                            <td>vloatile</td>
+                                            <td>while</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <h3>标识符</h3>
+                            <ul>
+                                <li>标识符是由字母或下划线开头和字母、数字、下划线组成的字符序列，用于表示符号常量名、变量名、数组名、函数名等。ANSI C规定标识符长度不能大于32个字符，PC则通常是前8个字符有效；</li>
+                            </ul>
+                            <h3>词汇分类</h3>
+                            <ul>
+                                <li>常量；</li>
+                                <li>变量；</li>
+                                <li>运算符；</li>
+                                <li>函数调用；</li>
+                                <li>表达式；</li>
+                                <li>表达式；</li>
+                                <li>保留字</li>
+                            </ul>
+                            <h3>基本语句分类</h3>
+                            <ul>
+                                <li>数据定义语句；</li>
+                                <li>赋值语句；</li>
+                                <li>函数调用语句；</li>
+                                <li>表达式语句；</li>
+                                <li>流程控制语句；</li>
+                                <li>复合语句；</li>
+                                <li>空语句；</li>
+                                <li>其他语句；</li>
+                            </ul>
+                            <h3>基本构成</h3>
+                            <ul>
+                                <li>一个程序包括一个或多个函数，但只能有一个主函数——名字是main；</li>
+                                <li>主函数可以调用任何其他函数，任何其他函数可以互相调用但不能调用主函数；</li>
+                            </ul>
+                            <h2>基本数据类型</h2>
+                            <ul>
+                                <li>构造类型是指由若干个相关的基本类型数据组合在一起形成的一种复杂的数据类型；</li>
+                                <li>数组是由同类型数据组合而成；</li>
+                                <li>结构型可以由不同数据类型组合而成；</li>
+                                <li>指针型用于表示内存地址；</li>
+                                <li>空类型表示不需要数据值，因此没有类型；</li>
+                            </ul>
+                            <h3>常量</h3>
+                            <p>常量、常数、字面常量是同一个意思，指程序运行过程中其值不改变的数据，常量有整形常量、实行常量、字符常量、字符串常量；</p>
+                            <ul>
+                                <li>整形常量可以存入十进制整数、八进制整数（以 0 结尾）和十六进制（以 0x 结尾）</li>
+                                <li>
+                                    实型常量只使用十进制，有两种形式：
+                                    <ul>
+                                        <li>一般形式：由整数、小数点和小数组成；</li>
+                                        <li>指数形式：由指数、大小字母E、尾数组成，指数必须十进制整形。形式如”尾数E/e指数“，计算公式为：尾数 X 10的指数次方，例如1.1E2，0e0，1E1。详细解释：<a href="https://zh.wikipedia.org/wiki/%E7%A7%91%E5%AD%A6%E8%AE%B0%E6%95%B0%E6%B3%95" title="科学记数法" target="_blank">科学记数法</a>和<a href="https://zh.wikipedia.org/wiki/%E5%86%AA" title="指数运算" target="_blank">指数运算</a>；</li>
+                                    </ul>
+                                </li>
+                                <li>字符常量是两个单引号<code>'</code>括住的单个字符；</li>
+                                <li>字符串常量是两个双引号<code>“</code>括住的一串字符；</li>
+                                <li>符号常量是常量的另一种表示方法，定义规则： <strong>#define 符号常量 常量</strong>。符号常量的定义规则属于“宏定义命令“，在程序中使用定义过的“宏名“称为“宏调用“。在编译前会将符号常量替换成对应的常量，称为“宏替换“，宏定义命令属于“预编译命令“；</li>
+                            </ul>
+                            <h3>变量</h3>
+                            <ul>
+                                <li>字符串只能是常量；</li>
+                                <li>被定义为整数的变量的值如果在-128～127之间可以当作字符型变量使用；</li>
+                                <li>被定义为字符型的变量可以当作整形使用，也可以被当作无符号（unsigned）整形使用，值在0～255之间；</li>
+                                <li>定义变量后会自动分配与其类型相配数量的连续内存单元；</li>
+                                <li>有名常量的定义规则： <strong>const 数据类型符 变量名 = 初值;</strong>；</li>
+                            </ul>
+                            <h3>运算符</h3>
+                            <ul>
+                                <li>运算符有一个运算对象称为单目运算符，放在运算对象前面称为前缀单目运算符，放在后面称为后缀单目运算符；</li>
+                                <li>运算符有两个运算对象称为双目运算符，又称双目中缀运算符；</li>
+                                <li>运算符有三个运算对象称为三目运算符；</li>
+                                <li>每个运算符运算的对象和运算结果有确定的数据类型；</li>
+                                <li>
+                                    运算符有分为基本运算符和专用运算符，
+                                    <ul>
+                                        <li>
+                                            基本运算符有：
+                                            <ul>
+                                                <li>算术运算符：+、-、*、／、%、++、--</li>
+                                                <li>关系运算符：&lt;、&lt;=、&gt;、&gt;=、==、!=</li>
+                                                <li>逻辑运算符！、&amp;&amp;、||</li>
+                                                <li>赋值运算符：=、+=、-+、*=、／=、%=</li>
+                                                <li>逗号运算符：，</li>
+                                                <li>数据长度运算符：sizeof()</li>
+                                                <li>位运算符：～、&amp;、|、^、&gt;&gt;、&lt;&lt;、&amp;=、||=、*=、&gt;&gt;=、&lt;&lt;=</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            专用运算符有
+                                            <ul>
+                                                <li>强制运算符：()</li>
+                                                <li>下标运算符：[]</li>
+                                                <li>成员运算符：-&gt;、.</li>
+                                                <li>指针运算符；&amp;、*、+、-</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    算术运算符对数据进行简单的算术运算，字符型数据可以看成整形数据，可以参加算数运算；
+                                    <ul>
+                                        <li>除运算<code>／</code>时如果两个运算对象都是整形，商是整数，有小数则截去小数部分，如果有一个运算对象是实型，商是实型；</li>
+                                        <li>模运算<code>%</code>的对象必须是整形数据，结果是整除后的余数，运算结果的符号必须与被除数相同；</li>
+                                    </ul>
+                                </li>
+                                <li>加1、减1运算，前缀是先加／减1后使用对象，后缀是先使用对象再加／减1；</li>
+                                <li>关系运算符用于比较两个数据大小，逻辑值<code>真</code>、<code>假</code>使用整数1、0表示，字符数据比较按字符对应的ASCII码值的大小比较；</li>
+                                <li>逻辑运算符对关系式、逻辑值、整形、实型、字符型等数据进行运算，运算结果是逻辑值；</li>
+                                <li>赋值运算符分为（基本）赋值运算符、算术自反赋值运算符、位自反赋值运算：</li>
+                                <li>
+                                    位运算符分为：位逻辑运算符、位移位运算符、位自反赋值运算符：
+                                    <ul>
+                                        <li>
+                                            位逻辑运算符：
+                                            <ul>
+                                                <li>位非（取反）：<code>～</code>，对二进制数每一位执行逻辑反操作，1反为0，0反为1；</li>
+                                                <li>位与：<code>&amp;</code>，两个等长二进制数同位都为1则结果值为1；</li>
+                                                <li>位或：<code>|</code>，两个等长二进制数同位一位为1则结果值为1；</li>
+                                                <li>按位加（位异或）：<code>^</code>，两个等长二进制数同位不同值结果值为1，同则结果值为0；</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            位移位运算符，移位时，移出的位数全部丢弃，移出的空位补入的数与左移或右移有关；
+                                            <ul>
+                                                <li>左移则补入数全部为0；</li>
+                                                <li>
+                                                    右移又与是否带符号有关：
+                                                    <ul>
+                                                        <li>带符号则补入的数全部等于原数的最左边位上的数；</li>
+                                                        <li>不带符号则补入的数全部为0；</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <p>运算符优先级：</p>
+                            <div class="col-lg-12 col-xs-12 col-sm-12 col-md-12">
+                                <table class="table table-bordered table-condensed table-responsive text-center">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center">类别</th>
+                                            <th class="text-center">符号</th>
+                                            <th class="text-center">名称</th>
+                                            <th class="text-center">级别</th>
+                                            <th class="text-center">结合型</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">强制</td>
+                                            <td>()</td>
+                                            <td>类型转换、参数表、函数调用</td>
+                                            <td class="text-center" style="padding-top: 6%;" rowspan="3">15</td>
+                                            <td class="text-center" style="padding-top: 6%;" rowspan="3">自左向右</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">下标</td>
+                                            <td>[]</td>
+                                            <td>数组元素下标</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">成员</td>
+                                            <td>-&gt; .</td>
+                                            <td>结构型成员</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">逻辑</td>
+                                            <td>!</td>
+                                            <td>逻辑非</td>
+                                            <td class="text-center" style="padding-top: 11%;" rowspan="6">14</td>
+                                            <td class="text-center" style="padding-top: 11%;" rowspan="6">自右向左</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">位</td>
+                                            <td>~</td>
+                                            <td>位非</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">算术</td>
+                                            <td>++ --</td>
+                                            <td>加1、减1</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">指针</td>
+                                            <td>&amp; *</td>
+                                            <td>取地址、取内容</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">算术</td>
+                                            <td>+ -</td>
+                                            <td>取正、取负</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">长度</td>
+                                            <td>sizeof()</td>
+                                            <td>数据长度</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center" rowspan="2">算术</td>
+                                            <td>* / %</td>
+                                            <td>乘、除、模（取余）</td>
+                                            <td class="text-center">13</td>
+                                            <td class="text-center" style="padding-top: 20%;" rowspan="10">自左向右</td>
+                                        </tr>
+                                        <tr>
+                                            <td>+ -</td>
+                                            <td>加 减</td>
+                                            <td class="text-center">12</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">位</td>
+                                            <td>&gt;&gt; &lt;&lt;</td>
+                                            <td>左位移 右位移</td>
+                                            <td class="text-center">11</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center" style="padding-top: 3%;" rowspan="2">关系</td>
+                                            <td>&gt;= &gt; &lt;= &lt;</td>
+                                            <td>大于等于 大于 小于等于 小于</td>
+                                            <td class="text-center">10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>== !=</td>
+                                            <td>相等 不相等</td>
+                                            <td class="text-center">9</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center" style="padding-top: 5%;" rowspan="3">位</td>
+                                            <td>&amp;</td>
+                                            <td>位逻辑与</td>
+                                            <td class="text-center">8</td>
+                                        </tr>
+                                        <tr>
+                                            <td>^</td>
+                                            <td>位逻辑按位加</td>
+                                            <td class="text-center">7</td>
+                                        </tr>
+                                        <tr>
+                                            <td>|</td>
+                                            <td>位逻辑或</td>
+                                            <td class="text-center">6</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center" style="padding-top: 3%;" rowspan="2">逻辑</td>
+                                            <td>&amp;&amp;</td>
+                                            <td>逻辑与</td>
+                                            <td class="text-center">5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>||</td>
+                                            <td>逻辑或</td>
+                                            <td class="text-center">4</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">条件</td>
+                                            <td>? :</td>
+                                            <td>条件</td>
+                                            <td class="text-center">3</td>
+                                            <td class="text-center" style="padding-top: 11%;" rowspan="3">自右向左</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">赋值</td>
+                                            <td>=</td>
+                                            <td>赋值</td>
+                                            <td class="text-center" style="padding-top: 8%;" rowspan="2">2</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center" style="padding-top: 5%;">自反赋值</td>
+                                            <td>
+                                                <p>+= -= *= /=</p>
+                                                <p>%= &amp;= ^=</p>
+                                                <p>|= &lt;&lt;= &gt;&gt;=</p>
+                                            </td>
+                                            <td>
+                                                <p>加复制 减复制 乘复制 除赋值</p>
+                                                <p>模赋值 位与赋值 位按位加赋值 </p>
+                                                <p>位或赋值 位左移复制 位右移赋值</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">逗号</td>
+                                            <td>.&lt;</td>
+                                            <td>逗号</td>
+                                            <td class="text-center">1</td>
+                                            <td class="text-center">自左向右</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <h3>表达式</h3>
+                            <ul>
+                                <li>
+                                    表达式的构成规则：   
+
+                                    <ol>
+                                        <li>单个的常量、变量、函数调用；  
+                                        </li>
+                                        <li>单目前缀运算符表达式；  
+                                        </li>
+                                        <li>表达式 单目后缀运算符；  
+                                        </li>
+                                        <li>表达式 双目运算符表达式；  
+                                        </li>
+                                        <li>表达式？表达式：表达式；  
+                                        </li>
+                                        <li>有限次使用上述规则获得的运算式；</li>
+                                    </ol>
+                                </li>
+                                <li>表达式分为：算术表达式、关系表达式、逻辑表达式、条件表达式、赋值表达式和逗号表达式；</li>
+                            </ul>
+                            <h3>数据类型转换规则</h3>
+                            <ul>
+                                <li>表达式计算中数据类型的自动转换规则：参加运算的各个数据都转换成数据长度最长的数据类型，计算出的结果值的类型就是数据长度最长的数据类型；  
+                                </li>
+                                <li>运算结果存入变量时数据类型的自动转换规则：先将运算结果的数据类型自动转换成左边变量的数据类型，然后再赋予该变量；  
+                                </li>
+                                <li>运算结果的强制性数据类型转行规则：在需要进行类型转换的表达式前面加上圆括号括住的数据类型符，如果表达式时单个常量或变量则不需要用圆括号括起，如果是则需要；</li>
+                            </ul>
+                            <h2>基本结构</h2>
+                            <ol>
+                                <li>顺序结构；</li>
+                                <li>
+                                    选择结构；
+                                    <ul>
+                                        <li>单分支选择结构：<code>if</code>；</li>
+                                        <li>双分支选择结构：<code>if else</code>；</li>
+                                        <li>多分支选择结构：<code>switch</code>；  
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    循环结构
+                                    <ul>
+                                        <li>当型循环结构：<code>while</code>；</li>
+                                        <li>直到型循环：<code>do while</code>；</li>
+                                        <li>次数型循环：<code>for</code>；  
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ol>
+                            <h3>输入/输出</h3>
+                            <p>输入格式字符表：</p>
+                            <div class="col-lg-12 col-xs-12 col-sm-12 col-md-12">
+                                <table class="table table-bordered table-condensed table-responsive text-center">
+                                    <thead>
+                                        <tr>
+                                            <th>格式字符</th>
+                                            <th>数据对象类型</th>
+                                            <th>输入形式</th>
+                                            <th>数据输入方法</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>%md</td>
+                                            <td style="padding-top: 2%;" rowspan="3">
+                                                <p>int short </p>
+                                                <p>unsigned int</p>
+                                                <p>unsigned short</p>
+                                            </td>
+                                            <td>十进制整数</td>
+                                            <td style="padding-top: 20%;" rowspan="10">
+                                                <p>无 m 按实际位数输入</p>
+                                                <p>有 m 输入 m 位</p>
+                                                <p>不足 m 位则跟回车换行符</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>%mo</td>
+                                            <td>八进制整数</td>
+                                        </tr>
+                                        <tr>
+                                            <td>%mx</td>
+                                            <td>十六进制整数</td>
+                                        </tr>
+                                        <tr>
+                                            <td>%mld</td>
+                                            <td style="padding-top: 4%;" rowspan="3">
+                                                <p>long </p>
+                                                <p>unsigned long</p></td>
+                                            <td>十进制整数</td>
+                                        </tr>
+                                        <tr>
+                                            <td>%mlo</td>
+                                            <td style="padding-top: 4%;" rowspan="2">八进制整数 十六进制整数</td>
+                                        </tr>
+                                        <tr>
+                                            <td>%mlx</td>
+                                        </tr>
+                                        <tr>
+                                            <td>%mf</td>
+                                            <td style="padding-top: 4%;" rowspan="2">float</td>
+                                            <td style="padding-top: 4%;" rowspan="2">十进制实数 十进制指数</td>
+                                        </tr>
+                                        <tr>
+                                            <td>%me</td>
+                                        </tr>
+                                        <tr>
+                                            <td>%mlf</td>
+                                            <td style="padding-top: 4%;" rowspan="2">double</td>
+                                            <td style="padding-top: 4%;" rowspan="2">十进制实数 十进制指数</td>
+                                        </tr>
+                                        <tr>
+                                            <td>%mle</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding-top: 4%;">%mc</td>
+                                            <td style="padding-top: 4%;">char</td>
+                                            <td style="padding-top: 4%;">单个字符</td>
+                                            <td style="padding-top: 3%;">
+                                                <p>无 m 仅取单个字符</p>
+                                                <p>有 m 输入 m 位，仅取第一个字符</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding-top: 4%;">%ms</td>
+                                            <td style="padding-top: 4%;">字符串</td>
+                                            <td style="padding-top: 4%;">字符串</td>
+                                            <td style="padding-top: 3%;">
+                                                <p>无 m 取若干字符直到回车或空格为止 </p>
+                                                <p>有 m 仅取前 m 个字符</p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p>输出格式字符表</p>
+                            <div class="col-lg-12 col-xs-12 col-sm-12 col-md-12">
+                                <table class="table table-bordered table-condensed table-responsive text-center">
+                                    <thead>
+                                        <tr>
+                                            <th>格式字符</th>
+                                            <th>数据对象类型</th>
+                                            <th>输入形式</th>
+                                            <th>数据输入方法</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>%-md</td>
+                                            <td style="padding-top: 4.5%;" rowspan="4">
+                                                <p>int short char</p>
+                                                <p>unsigned int</p>
+                                                <p>unsigned short</p>
+                                            </td>
+                                            <td>十进制整数</td>
+                                            <td style="padding-top: 9%;" rowspan="8">
+                                                <p>无 m 按实际位数输出</p>
+                                                <p>有 m 输出 m 位</p>
+                                                <p>超过 m 位按实际位数输出</p>
+                                                <p>不足 m 位用空格补足</p>
+                                                <p>有 - 右对齐</p>
+                                                <p>无 - 左对齐</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>%-mo</td>
+                                            <td>八进制整数</td>
+                                        </tr>
+                                        <tr>
+                                            <td>%-mx</td>
+                                            <td>十六进制整数</td>
+                                        </tr>
+                                        <tr>
+                                            <td>%-mu</td>
+                                            <td>无符号整数</td>
+                                        </tr>
+                                        <tr>
+                                            <td>%-mld</td>
+                                            <td style="padding-top: 6%;" rowspan="4">
+                                                <p>long </p>
+                                                <p>unsigned long</p></td>
+                                            <td>十进制整数</td>
+                                        </tr>
+                                        <tr>
+                                            <td>%-mlo</td>
+                                            <td>八进制整数</td>
+                                        </tr>
+                                        <tr>
+                                            <td>%-mlx</td>
+                                            <td>十六进制整数</td>
+                                        </tr>
+                                        <tr>
+                                            <td>%-mlu</td>
+                                            <td>无符号整数</td>
+                                        </tr>
+                                        <tr>
+                                            <td>%-m.nf</td>
+                                            <td style="padding-top: 10%;" rowspan="3">float double</td>
+                                            <td>十进制小数</td>
+                                            <td rowspan="3">
+                                                <p>无 m.n 按实际位数输出</p>
+                                                <p>有 m.n 输出 n 位小树</p>
+                                                <p>超过 m 位按实际位数输出</p>
+                                                <p>不足 m 位用空格补足</p>
+                                                <p>有 - 右对齐 无 - 左对齐</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>%-m.ne</td>
+                                            <td>十进制指数</td>
+                                        </tr>
+                                        <tr>
+                                            <td>%-g</td>
+                                            <td>自动选取 f 或 e 中宽度较小的格式</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding-top: 6%;">%-mc</td>
+                                            <td style="padding-top: 6%;">char int short</td>
+                                            <td style="padding-top: 6%;">单个字符</td>
+                                            <td>
+                                                <p>无 m 输出单个字符</p>
+                                                <p>有 m 输出 m 位，补 m - 1 个空格</p>
+                                                <p>无 - 号 右对齐 有 - 号 左对齐</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding-top: 8%;">%-m.ns</td>
+                                            <td style="padding-top: 8%;">字符串</td>
+                                            <td style="padding-top: 8%;">字符串</td>
+                                            <td>
+                                                <p>无 m.n 按实际字符数输出全部字符</p>
+                                                <p>有 m.n 仅输出前 n 个字符</p>
+                                                <p>补 m - n 个空格</p>
+                                                <p>无 - 号 右对齐 有 - 号 左对齐</p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <ul>
+                                <li><code>printf()</code>会按照自右向左顺序依次计算输出表达式表里表达式里的值；</li>
+                            </ul>
+                            <h2>数组</h2>
+                            <h3>二维数组的初始化</h3>
+                            <ul>
+                                <li>给所有元素赋值：<code>int a[2][2] = {{1, 3}, {2, 4}}；</code></li>
+                                <li>不分行给所有元素赋值：<code>int a[2][2] = {1, 2, 3, 4}；</code></li>
+                                <li>只对每行前若干元素赋值：<code>int a[4][3] = {{1}, {2}}；</code></li>
+                                <li>只对前若干行的前若干元素赋值：<code>int a[3][2] = {{1, 2}, {3, 4}}；</code></li>
+                                <li>若给所有行的前若干元素赋值，行长度可以省略：<code>int a[][2] = {1, 2, 3, 4, 5, 6}</code> 或 <code>int a[][2] = {{1, 2}, {3, 4}, {5, 6}}</code>，行长度都是3；</li>
+                            </ul>
+                            <h3>字符数组和字符串</h3>
+                            <ul>
+                                <li>字符串的最后一个字符是字符串结束标记符<code>'\0'</code>；</li>
+                                <li>使用<code>scanf("%s", 字符数组)</code>输入字符串会把回车换行符和空格符当作输入结束，结束后的输入不会存入字符数组；</li>
+                                <li><a href="#system_function" title="字符串处理的系统函数" target="_blank">字符串处理的系统函数</a></li>
+                            </ul>
+                            <h2>指针</h2>
+                            <ul>
+                                <li>指针是一种数据类型，用于存放数据的内存单元地址；</li>
+                                <li>当一个变量值占用一个字节时，该字节的地址就是变量的地址；当变量占用连续的若干字节时，第一个字节的地址（该字节的地址值是所- 占用的连续字节中地址值最小的）就是该变量的地址；</li>
+                                <li>通过变量名查取变量的地址，再从变量对应地址的字节中取得值或将值存入变量对应地址的字节中称为直接存取方式；</li>
+                                <li>一个数组占用的总字节数等于数组长度 X 每个数组元素占用的字节数；</li>
+                                <li>数组的首地址就是第一个元素的地址；</li>
+                                <li><strong>数组元素a[i]的地址 = 数组首地址 + i * 数组元素的数据类型所占用的字节数</strong>；</li>
+                                <li>指针型变量的数据类型是它将要指向的变量或数组的数据类型；</li>
+                                <li>地址型表达式：运算结构是地址型数据的表达式；</li>
+                                <li>一维数组名可以看成是地址常量，其值是一维数组的首地址；</li>
+                                <li>“*指针变量名“代表它指向的变量或数组元素；</li>
+                                <li>取地址运算符<code>&amp;</code> 的运算对象必须是已定义过的变量或数组元素，不可以是数组名；</li>
+                                <li>指针运算符<code>*</code> 的运算对象必须是地址，不能是整数或非地址型常量；</li>
+                            </ul>
+                            <h3>指向一维数组的指针变量</h3>
+                            <ul>
+                                <li>指针变量指向一维数组后，对下标为i的数组元素引用一共有下列四种方法：<strong>*(指针变量 + i) *(数组名 + i) 指针变量[i] 数组名[i]</strong> ，前两种称为指针法，后两种称为下标法；</li>
+                                <li>对指向一维数组的指针进行算术运算时，所加减的整数不是指绝对的地址整数值，而是该指针变量向后或向前运动的同类型一维数组元素的数目；</li>
+                                <li>指针变量的减法运算要求两个必须指向同一个数组，结果为指向的数组元素的下标的差；</li>
+                                <li>关系运算符可以用于比较地址值的大小，比较对象可以是指针变量、地址常量；</li>
+                            </ul>
+                            <h3>指向字符串的指针变量</h3>
+                            <ul>
+                                <li>允许直接使用字符串常量，可以用字符型指针变量指向它，以后可以使用字符型指针变量来处理这个字符串或字符串的单个字符；</li>
+                            </ul>
+                            <h2>函数</h2>
+                            <h3>函数概念</h3>
+                            <ul>
+                                <li>建立函数称为“函数的定义“；使用函数称为“函数的调用“；每一个函数都能完成特定的任务，称为“函数的功能“；每次调用函数时的某些待处理的数据和函数运行后获得的某些结果统称为“函数的参数“；带入函数的对象称为“函数参数的输入“；函数运行的结果带回调用函数称为“函数参数的输出“；函数参数的输入和输出统称“函数间数据的传递“；</li>
+                                <li>
+                                    函数的分类：
+                                    <ul>
+                                        <li>从定义上分为用户函数和系统函数；</li>
+                                        <li>从形式上分为有参函数和无参函数；</li>
+                                        <li>从返回值上分为有返回值函数和无返回值函数；</li>
+                                        <li>从函数的作用范围上分为外部函数和内部函数；  
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    函数分为<strong>函数头</strong> 和<strong>函数体</strong>：
+                                    <ul>
+                                        <li>
+                                            函数头分为：存储类型符、数据类型符、函数名、形式参数表；
+                                            <ul>
+                                                <li>
+                                                    存储类型符有<code>extern</code>和<code>static</code>，可以省略，省略时默认为<code>extern</code>；
+                                                    <ul>
+                                                        <li><code>extern</code>定义的函数称为外部函数，可以被其他编译单位的中的函数调用；</li>
+                                                        <li><code>static</code>定义的函数称为内部函数，只能被本编译单位中的函数调用；</li>
+                                                    </ul>
+                                                </li>
+                                                <li>函数名是一个标识符，在同一个编译单位中函数不能重名；</li>
+                                            </ul>
+                                        </li>
+                                        <li>函数体分为：数据定义语句序列、执行语句序列；</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    函数间传递数据有：<strong>值传递方式、地址传递方式、返回值方式、全局变量传递方式</strong>；
+                                    <ul>
+                                        <li>值传递方式传递的是参数值，特点是“参数值的单向传递“；形參是指针变量属于值传递，函数调用时需要为指针变量分配内存，结束时回收指针变量占用的内存，但是函数执行期间对指针变量的值所做的操作会保留；</li>
+                                        <li>地址传递方式传递的是地址，实參和形參都是地址型。调用函数时，将实际参数的地址赋予对应的形式参数数组作为其首地址，即使用相同的内存。</li>
+                                        <li>返回值传递方式要求函数头中要有数据类型符并在函数体的最后返回值；</li>
+                                        <li>全局变量传递方式使用在函数外定义的外部变量；</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <h3>变量的存储类型</h3>
+                            <ul>
+                                <li>
+                                    变量的存储类型分为：<code>auto</code>自动型、<code>register</code>寄存器型、<code>static</code>静态型、<code>extern</code>外部参照型：
+                                    <ul>
+                                        <li>
+                                            <code>auto</code>自动型、堆栈型，在省略存储类型符的情况下默认为自动型，分配在内存的堆栈区。
+                                            <ul>
+                                                <li>当一个变量被声明就会在堆栈区分配内存用于存放变量，函数调用结束后变量占用的内存会被释放供下一个变量使用；</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <code>register</code>寄存器型，分配在CPU的通用寄存器中；
+                                            <ul>
+                                                <li>寄存器型变量有数量限制，超出设为自动变量；</li>
+                                                <li>占用字节数多的变量不能定义为寄存器型变量；</li>
+                                                <li>寄存器型变量的作用域在函数内</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <code>static</code>静态型，分配在内存的数据区中；
+                                    <ul>
+                                        <li>在程序开始时已经分配好内存，程序结束时释放内存；</li>
+                                        <li>不进行初始化则赋予“零值”，数值型赋予0，字符型赋予<code>'\0'</code>；</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <code>extern</code>外部参照型，用于多个编译单位之间传递数据；
+                                    <ul>
+                                        <li>不允许初始化；</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <h3>变量的生存期和作用域</h3>
+                            <ul>
+                                <li>变量被分配内存至被收回内存期间称为“生存期”，变量可以使用的程序区域成为变量的作用域；；</li>
+                                <li>在函数外声明的变量称为“外部变量”，在函数内声明的变量称为“内部变量”；</li>
+                                <li>生存期从定义到程序结束的变量称为“全局变量“，生存期只覆盖某个函数的称为”局部变量“；</li>
+                                <li>外部变量只能定义成无存储类型或<code>static</code>，内部变量可以定义成<code>auto</code>、<code>register</code>、<code>static</code>；</li>
+                                <li><code>static</code>的内部变量的作用域是全局，尽管在离开定义的函数不能被使用但依然存在，直到程序结束才会被释放内存；</li>
+                            </ul>
+                            <h3>函数的嵌套调用和递归调用</h3>
+                            <ul>
+                                <li>嵌套调用是函数A调用函数B，函数B再调用函数C；递归调用是函数调用自己本身；</li>
+                                <li>向下的递归调用过程称为“递归过程”，向上的携带返回值计算返回表达式的过程称为“回溯过程”；</li>
+                            </ul>
+                            <h3>指针型函数</h3>
+                            <ul>
+                                <li>指针型函数指函数的返回值是指针型，接受返回值的必须是指针变量、指针数组元素等；</li>
+                                <li>指针型函数的函数名前需加上<code>*</code>；</li>
+                            </ul>
+                            <h2>结构型和自定义类型</h2>
+                            <h3>结构型</h3>
+                            <ul>
+                                <li>用户自定义的用于存放类型不同的数据的数据类型；</li>
+                                <li>定义规则：</li>
+                            </ul>
+                            <blockquote>
+                                <p>struts 结构型名
+                                    {
+                                    数据类型符 成员名；
+                                    ……
+                                    }</p>
+                            </blockquote>
+                            <ul>
+                                <li>成员也称“域”、“结构分量”；</li>
+                            </ul>
+                            <h3>结构型变量的定义和成员的引用</h3>
+                            <h4>定义</h4>
+                            <ol>
+                                <li>先定义结构型，后定义变量；</li>
+                                <li>定义结构型的同时定义变量；</li>
+                                <li>定义无名称结构型的同时定义变量；</li>
+                            </ol>
+                            <h4>成员的引用</h4>
+                            <ul>
+                                <li>结构型变量的地址和变量的成员的地址都可以使用；</li>
+                                <li>成员的引用，例：<strong>结构型变量名.成员名</strong>；</li>
+                                <li>
+                                    结构型变量成员地址的引用方法：
+                                    <ul>
+                                        <li>成员是变量形式的变量地址：&amp;结构型变量名.成员名；</li>
+                                        <li>成员是数组形式的数组首地址：结构型变量名.成员名；</li>
+                                        <li>成员是数组，其数组元素的地址：&amp;结构型变量，成员数组[下标]；</li>
+                                    </ul>
+                                </li>
+                                <li>结构型变量地址的引用方法：&amp;结构型变量名；</li>
+                            </ul>
+                            <h3>指向结构型数据的指针变量的定义和使用</h3>
+                            <ul>
+                                <li>调用方法：<strong>(*指针变量).成员名  指针变量-&gt;成员名</strong>；</li>
+                                <li>"*指针变量"必须用圆括号括住，因为“*”的优先级低于“.”，如果不加是语法错误：*指针变量.成员名；</li>
+                                <li>定义结构型是，其成员的变量可以是本结构型但必须是指针变量或指针数组；</li>
+                                <li>当结构型数组的首地址已经赋予相同结构结构型的指针变量，调用方法：<strong>(*(指针变量+i)).成员名  (指针变量+i)-&gt;成员名</strong>；</li>
+                            </ul>
+                            <h3>用户自定义类型</h3>
+                            <ul>
+                                <li><strong>typedef 类型符 类型符;</strong>，第一个类型符可以是基本数据类型符或用户自定义的无名称结构性；第二个类型符是用户自选的标识符，通常建议全大写；</li>
+                                <li>指针型自定义：<strong>typedef 类型符 * 类型符;</strong>，例：<code>typedef float * TF</code>，与 <code>float * f</code> 等价；</li>
+                            </ul>
+                            <h2>文件</h2>
+                            <ul>
+                                <li>如果文件存放的是数据称为“数据文件”，如果存放的是源程序清单或是编译连接后生成的可执行程序称为“程序文件”；</li>
+                                <li>从磁盘文件读取数据到内存：文件的打开；内存中的数据存入磁盘文件：文件的关闭；</li>
+                                <li>内存区是磁盘文件和程序中存放数据的变量、数组之间交换数据的缓冲区域，称为：文件缓冲区；</li>
+                                <li>计算机的输入/输入出设备的作用是输入/输出数据，其功能和文件的读取数据/写入数据相似，所以把输入/输出设备称为设备文件；</li>
+                                <li>键盘称标准输入设备；显示器称标准输出设备和标准错误输出设备；</li>
+                                <li>从输入设备上读取数据，可以看成是从输入设备文件中读数据；将数据写到输出设备上，可以看成是写到输出设备文件中；</li>
+                                <li>
+                                    文件类型是一种特殊的“结构型”，其成员记录了处理文件是所需的信息：
+                                    <ul>
+                                        <li>文件代号<code>int _fd</code>；</li>
+                                        <li>文件缓冲区剩余的字节数<code>int _cleft</code>；</li>
+                                        <li>文件操作模式<code>int _mode</code>；</li>
+                                        <li>下一个待处理字节的地址<code>char *nextc</code>；</li>
+                                        <li>文件缓冲区首地址<code>char *buff</code>；</li>
+                                    </ul>
+                                </li>
+                                <li>用“FILE”定义的指针变量称为“文件型指针”；</li>
+                            </ul>
+                            <p>文件系统函数：</p>
+                            <div class="col-lg-12 col-xs-12 col-sm-12 col-md-12">
+                                <table class="table table-bordered table-condensed table-responsive text-center">
+                                    <thead>
+                                        <tr>
+                                            <th>调用格式</th>
+                                            <th>功能</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>FILE * fopen(char * filename, char * mode)</td>
+                                            <td>打开文件</td>
+                                        </tr>
+                                        <tr>
+                                            <td>int fclose(FILE * fp)</td>
+                                            <td>关闭文件</td>
+                                        </tr>
+                                        <tr>
+                                            <td>int feof(FILE * fp)</td>
+                                            <td>文件尾测试，是文件尾返回非0，否则返回0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>int fputc(char ch, FILE * fp)</td>
+                                            <td>往文件写入字符。如果正确写入字符则返回刚写入文件的字符，否则返回EOF。EOF是符号常量，其值为 -1，意为“文件尾”</td>
+                                        </tr>
+                                        <tr>
+                                            <td>int fgetc(FILE * fp)</td>
+                                            <td>从 fp 指向的文件读取一个字符，失败返回EOF</td>
+                                        </tr>
+                                        <tr>
+                                            <td>int fputs(char * str, FILE * fp)</td>
+                                            <td>往文件写入 str 指向的字符串并舍去'\0'</td>
+                                        </tr>
+                                        <tr>
+                                            <td>int fgets(char * str, int n, FILE * fp)</td>
+                                            <td>从 fp 指向的文件读取 n - 1个字符，在其后补充'\0'并写入 str。如果读取到的字符中含有回车则读到回车为止并补充'\0'，读取不到返回 NULL</td>
+                                        </tr>
+                                        <tr>
+                                            <td>int fwrite(char * buf, unsigned int size, unsigned int n, FILE * fp)</td>
+                                            <td>将 buf 地址开始的 n 个数据（数据字节数为 size）写入文件</td>
+                                        </tr>
+                                        <tr>
+                                            <td>int fread(char * buf, unsigned int size, unsigned int n, FILE * fp)</td>
+                                            <td>从文件读取 n 个数据并存入 buf</td>
+                                        </tr>
+                                        <tr>
+                                            <td>int rewind(FILE * fp)</td>
+                                            <td>将文件指针指向文件开头，正确执行返回0，失败返回非0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>int fseek(FILE * fp, long offset, int from)</td>
+                                            <td>将文件指针从 from 指定的起始位置移动 offset 个字节</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p>文件使用方式：</p>
+                            <div class="col-lg-12 col-xs-12 col-sm-12 col-md-12">
+                                <table class="table table-bordered table-condensed table-responsive text-center">
+                                    <thead>
+                                        <tr>
+                                            <th>使用的字符串</th>
+                                            <th>功能</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>r</td>
+                                            <td>只读</td>
+                                        </tr>
+                                        <tr>
+                                            <td>w</td>
+                                            <td>只写</td>
+                                        </tr>
+                                        <tr>
+                                            <td>a</td>
+                                            <td>只能写入数据在文件尾部</td>
+                                        </tr>
+                                        <tr>
+                                            <td>r+</td>
+                                            <td>读写</td>
+                                        </tr>
+                                        <tr>
+                                            <td>w+</td>
+                                            <td>读写，文件不存在则新建，存在则删除文件所有内容然后写入</td>
+                                        </tr>
+                                        <tr>
+                                            <td>a+</td>
+                                            <td>读写已存在文件，写入数据在文件尾部</td>
+                                        </tr>
+                                        <tr>
+                                            <td>rb</td>
+                                            <td>打开二进制文件并读取</td>
+                                        </tr>
+                                        <tr>
+                                            <td>wb</td>
+                                            <td>打开二进制文件并写入，文件不存在则新建，存在则删除文件所有内容然后写入</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ab</td>
+                                            <td>打开二进制文件并写入数据在文件尾部</td>
+                                        </tr>
+                                        <tr>
+                                            <td>rb+</td>
+                                            <td>打开二进制文件并读写数据</td>
+                                        </tr>
+                                        <tr>
+                                            <td>wb+</td>
+                                            <td>打开二进制文件并读写数据，文件不存在则新建，存在则删除文件所有内容然后写入</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ab+</td>
+                                            <td>打开二进制文件，可以读取，也写入数据在文件尾部</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <h2 id="system_function">系统函数</h2>
+                            <div class="col-lg-12 col-xs-12 col-sm-12 col-md-12">
+                                <table class="table table-bordered table-condensed table-responsive text-center">
+                                    <thead>
+                                        <tr>
+                                            <th>类别</th>
+                                            <th>调用格式</th>
+                                            <th style="width: 45%;">功能</th>
+                                            <th>头函数</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="padding-top: 39%;" rowspan="16">数学</td>
+                                            <td>int abs(int x)</td>
+                                            <td>返回整数 x 的绝对值</td>
+                                            <td style="padding-top: 39%;" rowspan="16">math.h</td>
+                                        </tr>
+                                        <tr>
+                                            <td>double atof(char * x)</td>
+                                            <td>返回 x 对应字符串转换成的实数</td>
+                                        </tr>
+                                        <tr>
+                                            <td>double atoi(char * x)</td>
+                                            <td>返回 x 对应字符串转换成的整数</td>
+                                        </tr>
+                                        <tr>
+                                            <td>double ceil(double x)</td>
+                                            <td>返回大于或等于 x 的最小整数</td>
+                                        </tr>
+                                        <tr>
+                                            <td>double cos(double x)</td>
+                                            <td>返回余弦函数 cos(x) 值</td>
+                                        </tr>
+                                        <tr>
+                                            <td>double exp(double x)</td>
+                                            <td>返回 e<sup>x</sup></td>
+                                        </tr>
+                                        <tr>
+                                            <td>double fabs(double x)</td>
+                                            <td>返回双精度实数 x 的绝对值</td>
+                                        </tr>
+                                        <tr>
+                                            <td>double floor(double x)</td>
+                                            <td>返回小于或等于 x 的最大整数</td>
+                                        </tr>
+                                        <tr>
+                                            <td>long labs(long x)</td>
+                                            <td>返回长整数 x 的绝对值</td>
+                                        </tr>
+                                        <tr>
+                                            <td>double log(double x)</td>
+                                            <td>返回 In x(即log<sub>e</sub>x)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>double log10(double x)</td>
+                                            <td>返回 log<sub>10</sub>x</td>
+                                        </tr>
+                                        <tr>
+                                            <td>double pow(double x, double y)</td>
+                                            <td>返回 x<sup>y</sup></td>
+                                        </tr>
+                                        <tr>
+                                            <td>double pow10(double x)</td>
+                                            <td>返回 x<sup>10</sup></td>
+                                        </tr>
+                                        <tr>
+                                            <td>double sin(double x)</td>
+                                            <td>返回正弦函数 sin(x) 值</td>
+                                        </tr>
+                                        <tr>
+                                            <td>double sqrt(double x)</td>
+                                            <td>返回 x(&gt;= 0) 的正平方根</td>
+                                        </tr>
+                                        <tr>
+                                            <td>double tan(double x)</td>
+                                            <td>返回正切函数 tan(x) 值</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding-top: 29%;" rowspan="10">字符串</td>
+                                            <td>char * gets(char * string)</td>
+                                            <td>从键盘读一个字符串存入 string</td>
+                                            <td style="padding-top: 11%;" rowspan="4">stdio.h</td>
+                                        </tr>
+                                        <tr>
+                                            <td>int printf(char * string, exp 表)</td>
+                                            <td>自右向左计算每个表达式的值，按 string 的格式依次计算送显示器显示</td>
+                                        </tr>
+                                        <tr>
+                                            <td>void puts(char * string)</td>
+                                            <td>将 string 对应字符串送显示器显示</td>
+                                        </tr>
+                                        <tr>
+                                            <td>int scanf(char * str, add 表)</td>
+                                            <td>按 str 中格式从键盘读取数据依次存入 add 对应的地址中</td>
+                                        </tr>
+                                        <tr>
+                                            <td>char * strcat(char * string1, char * string2)</td>
+                                            <td>将 string2 对应字符串链接到 string1 后面</td>
+                                            <td style="padding-top: 18%;" rowspan="6">string,h</td>
+                                        </tr>
+                                        <tr>
+                                            <td>int strcmp(char * string1, char * string2)</td>
+                                            <td>将 string1 对应字符串和 string2 对应字符串比较</td>
+                                        </tr>
+                                        <tr>
+                                            <td>char * strcpy(char * string1, char * string2, int n)</td>
+                                            <td>将 string2 字符串中前 n - 1 个字符组成新字符串存入 string1 中，省略 n 则 string2 全复制</td>
+                                        </tr>
+                                        <tr>
+                                            <td>int strlen(char * string)</td>
+                                            <td>计算 string 对应字符串的长度</td>
+                                        </tr>
+                                        <tr>
+                                            <td>char * strwr(char * string)</td>
+                                            <td>将 string 字符串中大写字母改小写</td>
+                                        </tr>
+                                        <tr>
+                                            <td>char * strupr(char * string)</td>
+                                            <td>将 string 字符串中大写字母改大写</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding-top: 15%;" rowspan="9">字符</td>
+                                            <td>int get char()</td>
+                                            <td>返回从键盘读取的单个字符</td>
+                                            <td style="padding-top: 3%;" rowspan="2">stdio.h</td>
+                                        </tr>
+                                        <tr>
+                                            <td>int putchar(char ch)</td>
+                                            <td>将 ch 对应的字符送显示器显示</td>
+                                        </tr>
+                                        <tr>
+                                            <td>int toascii(int x)</td>
+                                            <td>求 x 低7位对应字符的 ASCII 码值</td>
+                                            <td style="padding-top: 14%;" rowspan="7">ctype.h</td>
+                                        </tr>
+                                        <tr>
+                                            <td>int tolower(int x)</td>
+                                            <td>将 x 中大写字母转小写字母</td>
+                                        </tr>
+                                        <tr>
+                                            <td>int toupper(int x)</td>
+                                            <td>将 x 中小写字母转大写字母</td>
+                                        </tr>
+                                        <tr>
+                                            <td>int isalpha(int x)</td>
+                                            <td>判断 x 是否是英文字母</td>
+                                        </tr>
+                                        <tr>
+                                            <td>int isdigit(int x)</td>
+                                            <td>判断 x 是否是数字字符</td>
+                                        </tr>
+                                        <tr>
+                                            <td>int islower(int x)</td>
+                                            <td>判断 x 是否是小写英文字母</td>
+                                        </tr>
+                                        <tr>
+                                            <td>int isupper(int x)</td>
+                                            <td>判断 x 是否是大写英文字母</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding-top: 16%;" rowspan="8">其他</td>
+                                            <td>void delay(int x)</td>
+                                            <td>延迟 x 毫秒</td>
+                                            <td style="padding-top: 10%;" rowspan="5">dos.h</td>
+                                        </tr>
+                                        <tr>
+                                            <td>void nosound()</td>
+                                            <td>中止 sound 函数发出的鸣笛声</td>
+                                        </tr>
+                                        <tr>
+                                            <td>void sound(int x)</td>
+                                            <td>发出频率为 x 赫兹的鸣笛声</td>
+                                        </tr>
+                                        <tr>
+                                            <td>void gatdate(struct date * x)</td>
+                                            <td>将计算当天日期存入 x 指向的 date 结构型的变量中</td>
+                                        </tr>
+                                        <tr>
+                                            <td>void gattime(struct time * x)</td>
+                                            <td>将计算机当时时间存入 x 指向的 time 结构型变量中</td>
+                                        </tr>
+                                        <tr>
+                                            <td>int random(int x)</td>
+                                            <td>产生一个0到 x - 1 之间的随机整数</td>
+                                            <td style="padding-top: 6%;" rowspan="3">stdlib.h</td>
+                                        </tr>
+                                        <tr>
+                                            <td>void randomize()</td>
+                                            <td>对随机数发生器进行初始化</td>
+                                        </tr>
+                                        <tr>
+                                            <td>void exit(int n)</td>
+                                            <td>关闭打开的文件，结束程序运行</td>
+                                        </tr>
+                                    </tbody>
+                                </table></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../../../../plugin/responsive-nav/responsive-nav.min.js"></script>
+        <!-- <script src="plugin/responsive-nav/responsive-nav.js"></script> -->
+        <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> 
+        <script type="text/javascript">
+var navigation = responsiveNav("nav", {
+    customToggle: ".nav-toggle"
+});
+$(function () {
+    $('#nav a').click(function () {
+        $(this).parent().addClass('active').siblings().removeClass('active');
+        var height = $($(this).attr('href')).offset().top - 290;
+        $('body').animate({
+            scrollTop: height
+        }, 248);
+        return false;
+    });
+})
+        </script>
+    </body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>Self Devourer</title>
+        <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../../../plugin/responsive-nav/responsive-nav.css">
+        <link rel="stylesheet" href="../../../../plugin/responsive-nav/styles.css">
+        <link rel="stylesheet" href="../../../../global/styles.css">
+        <style>
+            .blog-content {
+                font-size: 15px;
+                line-height: 180%;
+            }
+            hr {
+                border: 1px solid #eee;
+            }
+            blockquote {
+                padding: 3px 20px;
+                margin: 8px 5px;
+            }
+            blockquote p {
+                float: none;
+                font-size: 15px;
+                color: #999999;
+            }
+            @media (min-width: 768px) { 
+                .col-lg-11{
+                    border: 1px solid LightGrey;
+                } 
+                .blog-content {
+                    padding: 40px 40px;
+                }
+            }
+        </style>
+    <body> 
+        <div role="navigation" id="nav" class="nav-collapse">
+            <ul>
+                <li>
+                    <a href="../../../../index.php">博客</a>
+                </li>
+                <li class="active">
+                    <a href="../../../../technology_blog.php">技术博客</a>
+                </li>
+                <li>
+                    <a href="../../../../timeline.php">Timline</a>
+                </li>
+                <li>
+                    <a href="#about">联系</a>
+                </li>
+            </ul>
+        </div>
+        <div role="main" class="main">
+            <a href="#nav" class="nav-toggle" style="z-index: 1;">Menu</a>
+            <div class="container-fluid">
+                <div class="row" id="blog">
+                    <div class="col-sm-12 col-xs-12 col-md-12 col-lg-offset-1 col-lg-11">
+                        <div class="blog-content">
+                            <h1>我有特殊的飙车技巧</h1>
+                            <hr/>
+                            <p>  作为常年飙车的司机，最近开始觉得手动飙车已经满足不了我了，于是开了个项目，取名<a href="https://github.com/SelfDevourer/my-javlibrary" title="my-javlibrary" target="_blank">my-javlibrary</a>。<br>
+  它是纯粹个人的11区三次元爱情影片库，可以收藏你喜爱的演员，标记已拥有的影片，并且！它最强大的功能在于能够自动获取所有影片的磁力链接！ 
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <img class="img-responsive" src="http://selfdevourer.org/images/Manual_Driver.png">
+                                </div>
+                                <div class="col-lg-6">
+                                    <img class="img-responsive" src="http://selfdevourer.org/images/Auto_Driver.png">
+                                </div>
+                            </div>
+  自动的优点在于将手动的“番号搜索磁链——&gt;找到最优磁链”的重复工作转为自动，节省了很多时间（对我来说）。 <br>
+  my-javlibrary的主要功能只有“演员”和“展示"，演员用于添加喜爱的演员，支持番号添加和主页添加；展示包含展示所有作品和演员作品。<br>
+  番号添加是我最喜欢使用的添加方式。通过番号 my-javlibrary 可以找到主演演员，然后获取该演员的所有影片，接着获取每部影片的三条最优磁链。演员添加则是找到演员在某网站的作品页然后加入，也能达到同样效果。<br>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <img class="img-responsive"  src="http://selfdevourer.org/images/Add_Actor.png">
+                                </div>
+                            </div>                          
+  展示则是将所有影片或演员的所有影片的封面和番号列出，在详情页内会显示影片的详细信息包括：封面、番号、标题、主演、评分、拥有状态、磁链。
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <img class="img-responsive"  src="http://selfdevourer.org/images/Javs.png">
+                                </div>
+                                <div class="col-lg-12">
+                                    <img  class="img-responsive" src="http://selfdevourer.org/images/Jav_Details.png">
+                                </div>
+                            </div>
+  my-javlibrary 可以运行在Windows操作系统，依赖于JRE 1.8+、Apache Tomcat 1.7+。不能运载Linux是因为下载图片中没有做系统适配，JRE则是Java依赖的最小运行环境，Tomcat是因为 my-javlibrary 实际上是WEB，需要服务器来运行。<br>
+  my-javlibrary 分为前端和扫描器。前端用于展示和添加演员，扫描器用于接收前端添加的番号或演员信息然后进行采集工作，也就是负责了手动开车的循环部分。<br>
+  前端和扫描器的对接依赖于单线程线程池。在前端接收到新的番号或演员时，会往线程池中添加扫描任务。为了避免同时启动了过多的扫描任务，我引入了线程池，为了避免同时发送过多请求导致下载超时，我选择了单线程线程池。<br>
+  扫描器通过Jsoup进行HTML解析，Jsoup能够以JQuery选择器的方式遍历HTML，比起HtmlParser的遍历方法要简洁许多。<br>
+  未来我会为 my-javlibrary 加入邮件提示功能和标签功能，同时还会优化展示页的排序。请不要期待。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../../../../plugin/responsive-nav/responsive-nav.min.js"></script>
+        <!-- <script src="plugin/responsive-nav/responsive-nav.js"></script> -->
+        <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> 
+        <script type="text/javascript">
+            var navigation = responsiveNav("nav", {
+                customToggle: ".nav-toggle"
+            });
+            $(function () {
+                $('#nav a').click(function () {
+                    $(this).parent().addClass('active').siblings().removeClass('active');
+                    var height = $($(this).attr('href')).offset().top - 290;
+                    $('body').animate({
+                        scrollTop: height
+                    }, 248);
+                    return false;
+                });
+            })
+        </script>
+    </body>
+</html>
