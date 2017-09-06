@@ -2,7 +2,7 @@
 
 header("Content-Type: text/json; charset=UTF-8");
 $content = $_POST['content'];
-$db = new mysqli("127.0.0.1", "SelfDevourer", "c5xQc68dGeF3iXONZDZT", "selfdevourer_blog");
+$db = new mysqli("127.0.0.1", "loacalhost", "******", "selfdevourer_blog");
 if (mysqli_connect_errno()) {
     echo json_encode(array('code' => -1, 'msg' => '数据库连接异常'));
     exit;

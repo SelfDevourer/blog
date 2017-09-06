@@ -39,7 +39,7 @@ and open the template in the editor.
                         <div class="col-sm-12 col-xs-12 col-md-12 col-lg-offset-1 col-lg-10">
                             <ul class="timeline">
                                 <?php
-                                $db = new mysqli("127.0.0.1", "SelfDevourer", "c5xQc68dGeF3iXONZDZT", "selfdevourer_blog");
+                                $db = new mysqli("127.0.0.1", "loacalhost", "******", "selfdevourer_blog");
                                 if (mysqli_connect_errno()) {
                                     echo "数据库连接异常";
                                     exit;
